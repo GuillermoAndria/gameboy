@@ -1,5 +1,5 @@
 const GAME_LIBRARY = [
-  "pokemon-yellow.gb",
+  "pokemon-red.gb",
 ] as const;
 
 type GameName = typeof GAME_LIBRARY[number];
@@ -36,11 +36,16 @@ function getGameFromUrl(): GameName | null {
   if (!requestedGame) return null;
 
   const normalizedGame = normalizeGameName(requestedGame);
-  return isValidGame(normalizedGame) ? normalizedGame : null;
+
+  return isValidGame(normalizedGame)
+    ? normalizedGame
+    : null;
 }
 
 function getRandomGame(): GameName {
-  return GAME_LIBRARY[Math.floor(Math.random() * GAME_LIBRARY.length)];
+  return GAME_LIBRARY[
+    Math.floor(Math.random() * GAME_LIBRARY.length)
+  ];
 }
 
 export function getGameToLoad(): GameName {
@@ -51,27 +56,39 @@ export function getCurrentGame(): GameName | null {
   return getGameFromUrl();
 }
 
-export async function fetchRom(game: GameName): Promise<Uint8Array> {
+export async function fetchRom(
+  game: GameName,
+): Promise<Uint8Array> {
   const response = await fetch(`/roms/${game}`);
 
   if (!response.ok) {
     throw new Error(`Failed to fetch ${game}`);
   }
 
-  return new Uint8Array(await response.arrayBuffer());
+  return new Uint8Array(
+    await response.arrayBuffer(),
+  );
 }
 
 const GAME_TITLES: Record<GameName, string> = {
-  "pokemon-yellow.gb": "Pokémon Yellow",
+  "pokemon-red.gb": "Pokémon Red",
 };
 
-export function formatGameName(game: string): string {
-  if (isValidGame(game)) return GAME_TITLES[game];
+export function formatGameName(
+  game: string,
+): string {
+  if (isValidGame(game)) {
+    return GAME_TITLES[game];
+  }
 
   return game
     .replace(/\.gb[c]?$/, "")
     .split("-")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .map(
+      (word) =>
+        word.charAt(0).toUpperCase() +
+        word.slice(1),
+    )
     .join(" ");
 }
 
@@ -80,7 +97,16 @@ export const GAME_OPTIONS = GAME_LIBRARY
     value: game,
     label: formatGameName(game),
   }))
-  .sort((a, b) => a.label.localeCompare(b.label));
+  .sort(
+    (a, b) =>
+      a.label.localeCompare(b.label),
+  );
 
-export { GAME_LIBRARY, isValidGame };
-export type { GameName };
+export {
+  GAME_LIBRARY,
+  isValidGame,
+};
+
+export type {
+  GameName,
+};
