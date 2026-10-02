@@ -2825,7 +2825,7 @@ if (typeof exports$1 === "object" && exports$1 !== null && "default" in exports$
   exports$1.default;
 }
 exports$1.__esModule;
-let BUILD_ID = "2e24e11cec0601de3dc8332e0e190bc17c704671";
+let BUILD_ID = "f4d31ab70c9def4dee605260b6d9d92ba6fd613c";
 const DENO_DEPLOYMENT_ID$1 = void 0;
 function setBuildId(id) {
   BUILD_ID = id;
@@ -9084,19 +9084,49 @@ const fsRoute_0 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePro
   handler,
   handlers
 }, Symbol.toStringTag, { value: "Module" }));
-const clientEntry = "./assets/client-entry-BhR9Cg1h.js";
-const version$1 = "2e24e11cec0601de3dc8332e0e190bc17c704671";
+const clientEntry = "./assets/client-entry-CsrFaamg.js";
+const version$1 = "f4d31ab70c9def4dee605260b6d9d92ba6fd613c";
 const islands = /* @__PURE__ */ new Map();
 const islandPreparer = new IslandPreparer();
 islandPreparer.prepare(islands, Canvas$1, "/assets/fresh-island__Canvas-Ciq0a0Vq.js", "Canvas", []);
 const staticFiles$1 = /* @__PURE__ */ new Map([
   ["/assets/hooks.module-CtKKkkha.js", { "name": "/assets/hooks.module-CtKKkkha.js", "hash": "91d95b9c3f73e5a19593dc2af14987b0de34732296cae0a73d78914bfef74def", "filePath": "client/assets/hooks.module-CtKKkkha.js", "contentType": "text/javascript; charset=UTF-8", "immutable": true }],
-  ["/assets/client-entry-BhR9Cg1h.js", { "name": "/assets/client-entry-BhR9Cg1h.js", "hash": "0ff7e52470700913f0b40005bfa2081408858cecf59d0c7b0061389cc1c67de1", "filePath": "client/assets/client-entry-BhR9Cg1h.js", "contentType": "text/javascript; charset=UTF-8", "immutable": true }],
+  ["/assets/client-entry-CsrFaamg.js", { "name": "/assets/client-entry-CsrFaamg.js", "hash": "20f3a5c9fe375c0bf9bba1e6b857710e89d42f51211157453d14dbb54bf59851", "filePath": "client/assets/client-entry-CsrFaamg.js", "contentType": "text/javascript; charset=UTF-8", "immutable": true }],
   ["/assets/client-entry-BhchZsG4.css", { "name": "/assets/client-entry-BhchZsG4.css", "hash": "787c54daa42d552345b5c534f28ab7daf2929f0bff3f7eb9a6b72c698d395836", "filePath": "client/assets/client-entry-BhchZsG4.css", "contentType": "text/css; charset=UTF-8", "immutable": true }],
   ["/assets/fresh-island__Canvas-Ciq0a0Vq.js", { "name": "/assets/fresh-island__Canvas-Ciq0a0Vq.js", "hash": "88d727813c829c5fc1fdcab717026ffc44fe3f6a1e6f6d5486c07ead5b6c71d9", "filePath": "client/assets/fresh-island__Canvas-Ciq0a0Vq.js", "contentType": "text/javascript; charset=UTF-8", "immutable": true }],
   ["/assets/gameboy-42JYBtp9.js", { "name": "/assets/gameboy-42JYBtp9.js", "hash": "f11089ff780d0a78f823e55cff9f2e9842f735b25f6d1c1fe054bff0fdc595fe", "filePath": "client/assets/gameboy-42JYBtp9.js", "contentType": "text/javascript; charset=UTF-8", "immutable": true }],
   ["/assets/web-ui-BXgOqnZ5.png", { "name": "/assets/web-ui-BXgOqnZ5.png", "hash": "171a9c9a61b1caef519cae3f2cef4e8add380bfc2b718839a08ebf233588d489", "filePath": "client/assets/web-ui-BXgOqnZ5.png", "contentType": "image/png", "immutable": true }],
   ["/web-ui.png", { "name": "/web-ui.png", "hash": "171a9c9a61b1caef519cae3f2cef4e8add380bfc2b718839a08ebf233588d489", "filePath": "client/web-ui.png", "contentType": "image/png" }],
+  ["/roms/.git/config.worktree", { "name": "/roms/.git/config.worktree", "hash": "443a5f645c23c3d0c0aa09f634b2ad111d46ef61946b598a2fb311678ab47454", "filePath": "client/roms/.git/config.worktree", "contentType": "text/plain" }],
+  ["/roms/.git/objects/c6/02e6c03732017d969c308d4cc035eb562be048", { "name": "/roms/.git/objects/c6/02e6c03732017d969c308d4cc035eb562be048", "hash": "abea83723a331c7f62980e32120b46eae836c7afadebb9874cd3d53328e0b49b", "filePath": "client/roms/.git/objects/c6/02e6c03732017d969c308d4cc035eb562be048", "contentType": "text/plain" }],
+  ["/roms/.git/objects/ed/cbbdc28a060542c6c689a5be84dedfcc7791bc", { "name": "/roms/.git/objects/ed/cbbdc28a060542c6c689a5be84dedfcc7791bc", "hash": "4ff94a3febb8f3ebfe19396d9b340977b20d7caf975bab9a9d33b632c1f501c9", "filePath": "client/roms/.git/objects/ed/cbbdc28a060542c6c689a5be84dedfcc7791bc", "contentType": "text/plain" }],
+  ["/roms/.git/objects/18/f0e699f7e81d8751629adf2ec2247aaaaefe23", { "name": "/roms/.git/objects/18/f0e699f7e81d8751629adf2ec2247aaaaefe23", "hash": "ff9fd35ab9f6f81d83bf3abdbe13af57be0c3bb958e8901cc985c9e3f404bdc3", "filePath": "client/roms/.git/objects/18/f0e699f7e81d8751629adf2ec2247aaaaefe23", "contentType": "text/plain" }],
+  ["/roms/.git/FETCH_HEAD", { "name": "/roms/.git/FETCH_HEAD", "hash": "b4aa1fda53e1f8eae2b21f6802953e628a804af12f6795374472040db85798de", "filePath": "client/roms/.git/FETCH_HEAD", "contentType": "text/plain" }],
+  ["/roms/.git/config", { "name": "/roms/.git/config", "hash": "76f28e6b2bbd9df19a5d32c9df0e82985cd9b7e517c8eb5285d1dd4662511696", "filePath": "client/roms/.git/config", "contentType": "text/plain" }],
+  ["/roms/.git/refs/remotes/origin/main", { "name": "/roms/.git/refs/remotes/origin/main", "hash": "c85f94a91941412fa5288072c37f21cbfab4bccf5e55879cfbffa9359a8bb862", "filePath": "client/roms/.git/refs/remotes/origin/main", "contentType": "text/plain" }],
+  ["/roms/.git/refs/heads/main", { "name": "/roms/.git/refs/heads/main", "hash": "c85f94a91941412fa5288072c37f21cbfab4bccf5e55879cfbffa9359a8bb862", "filePath": "client/roms/.git/refs/heads/main", "contentType": "text/plain" }],
+  ["/roms/.git/hooks/pre-merge-commit.sample", { "name": "/roms/.git/hooks/pre-merge-commit.sample", "hash": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53", "filePath": "client/roms/.git/hooks/pre-merge-commit.sample", "contentType": "text/plain" }],
+  ["/roms/.git/hooks/fsmonitor-watchman.sample", { "name": "/roms/.git/hooks/fsmonitor-watchman.sample", "hash": "9159720099ad5595b8e66645cbfd47763c1e920f46e0b50ae75e642bbec57ef0", "filePath": "client/roms/.git/hooks/fsmonitor-watchman.sample", "contentType": "text/plain" }],
+  ["/roms/.git/hooks/pre-push.sample", { "name": "/roms/.git/hooks/pre-push.sample", "hash": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a", "filePath": "client/roms/.git/hooks/pre-push.sample", "contentType": "text/plain" }],
+  ["/roms/.git/hooks/update.sample", { "name": "/roms/.git/hooks/update.sample", "hash": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106", "filePath": "client/roms/.git/hooks/update.sample", "contentType": "text/plain" }],
+  ["/roms/.git/hooks/commit-msg.sample", { "name": "/roms/.git/hooks/commit-msg.sample", "hash": "efc1401b0e99d1ff51494d154d98b46c1e99059bcd8bf9f73cecde19fd3eb23b", "filePath": "client/roms/.git/hooks/commit-msg.sample", "contentType": "text/plain" }],
+  ["/roms/.git/hooks/applypatch-msg.sample", { "name": "/roms/.git/hooks/applypatch-msg.sample", "hash": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7", "filePath": "client/roms/.git/hooks/applypatch-msg.sample", "contentType": "text/plain" }],
+  ["/roms/.git/hooks/pre-receive.sample", { "name": "/roms/.git/hooks/pre-receive.sample", "hash": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989", "filePath": "client/roms/.git/hooks/pre-receive.sample", "contentType": "text/plain" }],
+  ["/roms/.git/hooks/prepare-commit-msg.sample", { "name": "/roms/.git/hooks/prepare-commit-msg.sample", "hash": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619", "filePath": "client/roms/.git/hooks/prepare-commit-msg.sample", "contentType": "text/plain" }],
+  ["/roms/.git/hooks/pre-rebase.sample", { "name": "/roms/.git/hooks/pre-rebase.sample", "hash": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3", "filePath": "client/roms/.git/hooks/pre-rebase.sample", "contentType": "text/plain" }],
+  ["/roms/.git/hooks/post-update.sample", { "name": "/roms/.git/hooks/post-update.sample", "hash": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5", "filePath": "client/roms/.git/hooks/post-update.sample", "contentType": "text/plain" }],
+  ["/roms/.git/hooks/pre-applypatch.sample", { "name": "/roms/.git/hooks/pre-applypatch.sample", "hash": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475", "filePath": "client/roms/.git/hooks/pre-applypatch.sample", "contentType": "text/plain" }],
+  ["/roms/.git/hooks/push-to-checkout.sample", { "name": "/roms/.git/hooks/push-to-checkout.sample", "hash": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f", "filePath": "client/roms/.git/hooks/push-to-checkout.sample", "contentType": "text/plain" }],
+  ["/roms/.git/hooks/pre-commit.sample", { "name": "/roms/.git/hooks/pre-commit.sample", "hash": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b", "filePath": "client/roms/.git/hooks/pre-commit.sample", "contentType": "text/plain" }],
+  ["/roms/.git/hooks/sendemail-validate.sample", { "name": "/roms/.git/hooks/sendemail-validate.sample", "hash": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92", "filePath": "client/roms/.git/hooks/sendemail-validate.sample", "contentType": "text/plain" }],
+  ["/roms/.git/HEAD", { "name": "/roms/.git/HEAD", "hash": "28d25bf82af4c0e2b72f50959b2beb859e3e60b9630a5e8c603dad4ddb2b6e80", "filePath": "client/roms/.git/HEAD", "contentType": "text/plain" }],
+  ["/roms/.git/index", { "name": "/roms/.git/index", "hash": "b4c39ba6630b5dcc5eddfd4d2313b2e5eee48f64a39ffdfcb2fd1a6965034641", "filePath": "client/roms/.git/index", "contentType": "text/plain" }],
+  ["/roms/.git/logs/refs/remotes/origin/main", { "name": "/roms/.git/logs/refs/remotes/origin/main", "hash": "6a33656ddbcb95db9f02968765796a6eba140ead546bf8f379fc06d58c5f7058", "filePath": "client/roms/.git/logs/refs/remotes/origin/main", "contentType": "text/plain" }],
+  ["/roms/.git/logs/refs/heads/main", { "name": "/roms/.git/logs/refs/heads/main", "hash": "eea3bd2554d89b7d9100817f7aed9a489382961bfdadb766388b5161c2ac70c2", "filePath": "client/roms/.git/logs/refs/heads/main", "contentType": "text/plain" }],
+  ["/roms/.git/logs/HEAD", { "name": "/roms/.git/logs/HEAD", "hash": "df207db6c5b8eee781750c4eb316636aa413b5f4b4d368efe68149476ef38b43", "filePath": "client/roms/.git/logs/HEAD", "contentType": "text/plain" }],
+  ["/roms/.git/description", { "name": "/roms/.git/description", "hash": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee", "filePath": "client/roms/.git/description", "contentType": "text/plain" }],
+  ["/roms/.git/shallow", { "name": "/roms/.git/shallow", "hash": "c85f94a91941412fa5288072c37f21cbfab4bccf5e55879cfbffa9359a8bb862", "filePath": "client/roms/.git/shallow", "contentType": "text/plain" }],
+  ["/roms/.git/info/exclude", { "name": "/roms/.git/info/exclude", "hash": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1", "filePath": "client/roms/.git/info/exclude", "contentType": "text/plain" }],
   ["/roms/pokemon-red.gb", { "name": "/roms/pokemon-red.gb", "hash": "5ca7ba01642a3b27b0cc0b5349b52792795b62d3ed977e98a09390659af96b7b", "filePath": "client/roms/pokemon-red.gb", "contentType": "text/plain" }],
   ["/roms/.gitkeep", { "name": "/roms/.gitkeep", "hash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b", "filePath": "client/roms/.gitkeep", "contentType": "text/plain" }],
   ["/logo.svg", { "name": "/logo.svg", "hash": "bf1196aeac0c511ec4b81b846993de208012c4158fba73d17b575236164d63ce", "filePath": "client/logo.svg", "contentType": "image/svg+xml" }],
