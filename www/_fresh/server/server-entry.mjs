@@ -2825,7 +2825,7 @@ if (typeof exports$1 === "object" && exports$1 !== null && "default" in exports$
   exports$1.default;
 }
 exports$1.__esModule;
-let BUILD_ID = "fd48e6ddb5520bafe518b15f5cb3cd93d94369bb";
+let BUILD_ID = "dbc2d7daf3b41052ec3b0cf3ccea874c88e02639";
 const DENO_DEPLOYMENT_ID$1 = void 0;
 function setBuildId(id) {
   BUILD_ID = id;
@@ -6811,7 +6811,7 @@ function useDismiss(open, close, refs) {
     };
   }, [open, close]);
 }
-const GAME_LIBRARY = ["asteroids.gb", "batman.gb", "contra.gb", "donkey-kong.gb", "dr-mario-dx.gb", "dr-mario.gb", "galaga-dx.gb", "kirby-dream-2-dx.gb", "kirby-dream-2.gb", "kirby-dream-dx.gb", "kirby-dream.gb", "kirby-tilt-n-tumble.gbc", "megaman-v-dx.gb", "megaman-willy.gb", "metal-gear-solid.gbc", "pokemon-crystal.gbc", "pokemon-gold.gbc", "pokemon-silver.gbc", "pokemon-yellow.gb", "super-mario-deluxe.gbc", "super-mario.gb", "tetris-dx.gb", "tetris.gb", "trip-world.gb", "wario-land-3.gbc", "zelda-dx.gbc", "zelda-oracle-of-ages.gbc", "zelda.gb"];
+const GAME_LIBRARY = ["pokemon-yellow.gb"];
 function isValidGame(game) {
   return GAME_LIBRARY.includes(game);
 }
@@ -6845,38 +6845,13 @@ function getCurrentGame() {
 }
 async function fetchRom(game) {
   const response = await fetch(`/roms/${game}`);
-  if (!response.ok) throw new Error(`Failed to fetch ${game}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch ${game}`);
+  }
   return new Uint8Array(await response.arrayBuffer());
 }
 const GAME_TITLES = {
-  "asteroids.gb": "Asteroids",
-  "batman.gb": "Batman",
-  "contra.gb": "Contra: The Alien Wars",
-  "donkey-kong.gb": "Donkey Kong",
-  "dr-mario-dx.gb": "Dr. Mario DX",
-  "dr-mario.gb": "Dr. Mario",
-  "galaga-dx.gb": "Galaga DX",
-  "kirby-dream-2-dx.gb": "Kirby's Dream Land 2 DX",
-  "kirby-dream-2.gb": "Kirby's Dream Land 2",
-  "kirby-dream-dx.gb": "Kirby's Dream Land DX",
-  "kirby-dream.gb": "Kirby's Dream Land",
-  "kirby-tilt-n-tumble.gbc": "Kirby Tilt 'n' Tumble",
-  "megaman-v-dx.gb": "Mega Man V DX",
-  "megaman-willy.gb": "Mega Man: Dr. Wily's Revenge",
-  "metal-gear-solid.gbc": "Metal Gear Solid",
-  "pokemon-crystal.gbc": "Pokémon Crystal",
-  "pokemon-gold.gbc": "Pokémon Gold",
-  "pokemon-silver.gbc": "Pokémon Silver",
-  "pokemon-yellow.gb": "Pokémon Yellow",
-  "super-mario-deluxe.gbc": "Super Mario Bros. Deluxe",
-  "super-mario.gb": "Super Mario Land",
-  "tetris-dx.gb": "Tetris DX",
-  "tetris.gb": "Tetris",
-  "trip-world.gb": "Trip World",
-  "wario-land-3.gbc": "Wario Land 3",
-  "zelda-dx.gbc": "Link's Awakening DX",
-  "zelda-oracle-of-ages.gbc": "Oracle of Ages",
-  "zelda.gb": "Link's Awakening"
+  "pokemon-yellow.gb": "Pokémon Yellow"
 };
 function formatGameName(game) {
   if (isValidGame(game)) return GAME_TITLES[game];
@@ -9107,16 +9082,16 @@ const fsRoute_0 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePro
   handler,
   handlers
 }, Symbol.toStringTag, { value: "Module" }));
-const clientEntry = "./assets/client-entry-C_csSsFk.js";
-const version$1 = "fd48e6ddb5520bafe518b15f5cb3cd93d94369bb";
+const clientEntry = "./assets/client-entry-D-dt5D4V.js";
+const version$1 = "dbc2d7daf3b41052ec3b0cf3ccea874c88e02639";
 const islands = /* @__PURE__ */ new Map();
 const islandPreparer = new IslandPreparer();
-islandPreparer.prepare(islands, Canvas$1, "/assets/fresh-island__Canvas-Cz6lxTPn.js", "Canvas", []);
+islandPreparer.prepare(islands, Canvas$1, "/assets/fresh-island__Canvas-BUKaPO9d.js", "Canvas", []);
 const staticFiles$1 = /* @__PURE__ */ new Map([
   ["/assets/hooks.module-CtKKkkha.js", { "name": "/assets/hooks.module-CtKKkkha.js", "hash": "91d95b9c3f73e5a19593dc2af14987b0de34732296cae0a73d78914bfef74def", "filePath": "client/assets/hooks.module-CtKKkkha.js", "contentType": "text/javascript; charset=UTF-8", "immutable": true }],
-  ["/assets/client-entry-C_csSsFk.js", { "name": "/assets/client-entry-C_csSsFk.js", "hash": "670be932838b1faade5b8992367117a4533a5b48cee683b67a878d7a4a803586", "filePath": "client/assets/client-entry-C_csSsFk.js", "contentType": "text/javascript; charset=UTF-8", "immutable": true }],
+  ["/assets/client-entry-D-dt5D4V.js", { "name": "/assets/client-entry-D-dt5D4V.js", "hash": "e1092222307979ac3f14c9038288a1fd2c88b2affa842f8bb25eae1091673fb4", "filePath": "client/assets/client-entry-D-dt5D4V.js", "contentType": "text/javascript; charset=UTF-8", "immutable": true }],
   ["/assets/client-entry-BhchZsG4.css", { "name": "/assets/client-entry-BhchZsG4.css", "hash": "787c54daa42d552345b5c534f28ab7daf2929f0bff3f7eb9a6b72c698d395836", "filePath": "client/assets/client-entry-BhchZsG4.css", "contentType": "text/css; charset=UTF-8", "immutable": true }],
-  ["/assets/fresh-island__Canvas-Cz6lxTPn.js", { "name": "/assets/fresh-island__Canvas-Cz6lxTPn.js", "hash": "259499dae6d52d1075490cc29e801be4db871fc1479b7309ba2730b3ec72c5d3", "filePath": "client/assets/fresh-island__Canvas-Cz6lxTPn.js", "contentType": "text/javascript; charset=UTF-8", "immutable": true }],
+  ["/assets/fresh-island__Canvas-BUKaPO9d.js", { "name": "/assets/fresh-island__Canvas-BUKaPO9d.js", "hash": "4204237d9b21ddccd1efc7616c9c1930403947044e35d0a9025026088895dc82", "filePath": "client/assets/fresh-island__Canvas-BUKaPO9d.js", "contentType": "text/javascript; charset=UTF-8", "immutable": true }],
   ["/assets/gameboy-42JYBtp9.js", { "name": "/assets/gameboy-42JYBtp9.js", "hash": "f11089ff780d0a78f823e55cff9f2e9842f735b25f6d1c1fe054bff0fdc595fe", "filePath": "client/assets/gameboy-42JYBtp9.js", "contentType": "text/javascript; charset=UTF-8", "immutable": true }],
   ["/assets/web-ui-BXgOqnZ5.png", { "name": "/assets/web-ui-BXgOqnZ5.png", "hash": "171a9c9a61b1caef519cae3f2cef4e8add380bfc2b718839a08ebf233588d489", "filePath": "client/assets/web-ui-BXgOqnZ5.png", "contentType": "image/png", "immutable": true }],
   ["/web-ui.png", { "name": "/web-ui.png", "hash": "171a9c9a61b1caef519cae3f2cef4e8add380bfc2b718839a08ebf233588d489", "filePath": "client/web-ui.png", "contentType": "image/png" }],
