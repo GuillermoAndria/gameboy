@@ -1,24 +1,24 @@
-name: Build GameBoy WebAssembly
+name: Build and Deploy GameBoy
 
 on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  build:
+  build-deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Descargar proyecto principal
-        uses: actions/checkout@v7
+        uses: actions/checkout@v4
         with:
           submodules: recursive
           ref: main
 
       - name: Descargar ROMs privadas
-        uses: actions/checkout@v7
+        uses: actions/checkout@v4
         with:
           repository: GuillermoAndria/gameboy-roms
           token: ${{ secrets.ROMS_TOKEN }}
@@ -26,21 +26,26 @@ jobs:
 
       - name: Verificar ROM privada
         run: |
-          echo "Contenido de ROMs:"
-          ls -lah ROMs
           test -f ROMs/pokemon-red.gb
           echo "pokemon-red.gb encontrada correctamente"
 
-      - name: Compilar solamente WebAssembly
+      - name: Limpiar ROMs publicas del workspace
+        run: |
+          rm -rf www/static/roms
+          mkdir -p www/static/roms
+
+      - name: Compilar WebAssembly
         run: |
           cmake -B build -DCMAKE_BUILD_TYPE=Release
           cmake --build build --target wasm --parallel 1
 
-      - name: Verificar WebAssembly
+      - name: Verificar archivos generados
         run: |
           test -f www/static/gameboy.js
           test -f www/static/gameboy.wasm
           test -f www/static/roms/pokemon-red.gb
+
+          echo "Archivos listos:"
           ls -lh www/static/gameboy.js
           ls -lh www/static/gameboy.wasm
           ls -lh www/static/roms/pokemon-red.gb
@@ -50,30 +55,25 @@ jobs:
         with:
           deno-version: v2.x
 
-      - name: Compilar web Fresh
+      - name: Instalar dependencias
         working-directory: www
-        run: |
-          deno install
-          deno task build
+        run: deno install
 
-      - name: Verificar build Fresh
+      - name: Compilar Fresh
+        working-directory: www
+        run: deno task build
+
+      - name: Verificar Fresh
         run: |
           test -f www/_fresh/server.js
-          echo "Build Fresh generado correctamente:"
-          ls -lah www/_fresh
+          echo "Fresh compilado correctamente"
 
-      - name: Guardar build completo
+      - name: Desplegar en Deno Deploy
+        working-directory: www
+        env:
+          DENO_DEPLOY_TOKEN: ${{ secrets.DENO_DEPLOY_TOKEN }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add -f www/static/gameboy.js
-          git add -f www/static/gameboy.wasm
-          git add -f www/_fresh
-
-          if git diff --cached --quiet; then
-            echo "El build ya estaba actualizado."
-          else
-            git commit -m "Build web completa"
-            git push origin HEAD:main
-          fi
+          deno deploy \
+            --org gameboy2 \
+            --app gameboy \
+            --prod
