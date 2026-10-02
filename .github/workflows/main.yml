@@ -23,21 +23,27 @@ jobs:
       - name: Compilar solamente WebAssembly
         run: |
           cmake -B build -DCMAKE_BUILD_TYPE=Release
-          cmake --build build --target wasm --parallel 1 --verbose
+          cmake --build build --target wasm --parallel 1
 
-      - name: Verificar archivos WebAssembly
+      - name: Verificar WebAssembly
         run: |
-          echo "Verificando gameboy.js..."
           test -f www/static/gameboy.js
-
-          echo "Verificando gameboy.wasm..."
           test -f www/static/gameboy.wasm
-
-          echo "Archivos generados correctamente:"
           ls -lh www/static/gameboy.js
           ls -lh www/static/gameboy.wasm
 
-      - name: Guardar archivos compilados en GitHub
+      - name: Instalar Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
+      - name: Probar build de la web
+        working-directory: www
+        run: |
+          deno install
+          deno task build
+
+      - name: Guardar WebAssembly
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
