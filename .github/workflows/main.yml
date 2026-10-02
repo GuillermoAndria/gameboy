@@ -37,23 +37,30 @@ jobs:
         with:
           deno-version: v2.x
 
-      - name: Probar build de la web
+      - name: Compilar web Fresh
         working-directory: www
         run: |
           deno install
           deno task build
 
-      - name: Guardar WebAssembly
+      - name: Verificar build Fresh
+        run: |
+          test -f www/_fresh/server.js
+          echo "Build Fresh generado correctamente:"
+          ls -lah www/_fresh
+
+      - name: Guardar build completo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add -f www/static/gameboy.js
           git add -f www/static/gameboy.wasm
+          git add -f www/_fresh
 
           if git diff --cached --quiet; then
-            echo "Los archivos ya estaban actualizados."
+            echo "El build ya estaba actualizado."
           else
-            git commit -m "Build GameBoy WebAssembly"
+            git commit -m "Build web completa"
             git push origin HEAD:main
           fi
