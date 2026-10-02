@@ -29,9 +29,9 @@ function gameboyWorkerPlugin(): Plugin {
 
 export default defineConfig({
   plugins: [
+    fresh(),
     gameboyWorkerPlugin(),
     deno(),
-    fresh(),
     tailwindcss(),
   ],
 
