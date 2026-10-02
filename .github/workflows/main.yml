@@ -1,0 +1,48 @@
+name: Build GameBoy WebAssembly
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar proyecto y submodulos
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          ref: main
+
+      - name: Crear carpeta ROMs
+        run: mkdir -p ROMs
+
+      - name: Compilar GameBoy
+        run: |
+          cmake -B build -DCMAKE_BUILD_TYPE=Release
+          cmake --build build --parallel 2
+
+      - name: Verificar archivos WebAssembly
+        run: |
+          test -f www/static/gameboy.js
+          test -f www/static/gameboy.wasm
+          ls -lh www/static/gameboy.js
+          ls -lh www/static/gameboy.wasm
+
+      - name: Guardar archivos compilados en GitHub
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -f www/static/gameboy.js
+          git add -f www/static/gameboy.wasm
+
+          if git diff --cached --quiet; then
+            echo "Los archivos ya estaban actualizados."
+          else
+            git commit -m "Build GameBoy WebAssembly"
+            git push origin HEAD:main
+          fi
