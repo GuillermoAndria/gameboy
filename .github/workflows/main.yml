@@ -11,14 +11,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Descargar proyecto y submodulos
-        uses: actions/checkout@v4
+      - name: Descargar proyecto principal
+        uses: actions/checkout@v7
         with:
           submodules: recursive
           ref: main
 
-      - name: Crear carpeta ROMs
-        run: mkdir -p ROMs
+      - name: Descargar ROMs privadas
+        uses: actions/checkout@v7
+        with:
+          repository: GuillermoAndria/gameboy-roms
+          token: ${{ secrets.ROMS_TOKEN }}
+          path: ROMs
+
+      - name: Verificar ROM privada
+        run: |
+          echo "Contenido de ROMs:"
+          ls -lah ROMs
+          test -f ROMs/pokemon-red.gb
+          echo "pokemon-red.gb encontrada correctamente"
 
       - name: Compilar solamente WebAssembly
         run: |
@@ -29,8 +40,10 @@ jobs:
         run: |
           test -f www/static/gameboy.js
           test -f www/static/gameboy.wasm
+          test -f www/static/roms/pokemon-red.gb
           ls -lh www/static/gameboy.js
           ls -lh www/static/gameboy.wasm
+          ls -lh www/static/roms/pokemon-red.gb
 
       - name: Instalar Deno
         uses: denoland/setup-deno@v2
