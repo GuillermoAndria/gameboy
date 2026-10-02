@@ -1,7 +1,6 @@
 import { defineConfig, Plugin } from "vite";
 import { fresh } from "@fresh/plugin-vite";
 import tailwindcss from "@tailwindcss/vite";
-import deno from "@deno/vite-plugin";
 
 function gameboyWorkerPlugin(): Plugin {
   return {
@@ -31,9 +30,17 @@ export default defineConfig({
   plugins: [
     fresh(),
     gameboyWorkerPlugin(),
-    deno(),
     tailwindcss(),
   ],
+
+  resolve: {
+    alias: [
+      {
+        find: /^npm:preact-render-to-string@.*$/,
+        replacement: "preact-render-to-string",
+      },
+    ],
+  },
 
   server: {
     headers: {
