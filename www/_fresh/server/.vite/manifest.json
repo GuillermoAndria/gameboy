@@ -1,0 +1,34 @@
+{
+  "fresh-route::_index": {
+    "file": "assets/_fresh-route___index-DnkBZS6a.mjs",
+    "name": "_fresh-route___index",
+    "src": "fresh-route::_index",
+    "isDynamicEntry": true,
+    "imports": [
+      "fresh:server_entry"
+    ]
+  },
+  "fresh:server_entry": {
+    "file": "server-entry.mjs",
+    "name": "server-entry",
+    "src": "fresh:server_entry",
+    "isEntry": true,
+    "dynamicImports": [
+      "static/gameboy.js",
+      "fresh-route::_index"
+    ],
+    "assets": [
+      "assets/web-ui-BXgOqnZ5.png"
+    ]
+  },
+  "static/gameboy.js": {
+    "file": "assets/gameboy-8KWh4XjG.mjs",
+    "name": "gameboy",
+    "src": "static/gameboy.js",
+    "isDynamicEntry": true
+  },
+  "static/web-ui.png": {
+    "file": "assets/web-ui-BXgOqnZ5.png",
+    "src": "static/web-ui.png"
+  }
+}

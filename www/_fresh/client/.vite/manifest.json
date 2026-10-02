@@ -1,0 +1,40 @@
+{
+  "_hooks.module-CtKKkkha.js": {
+    "file": "assets/hooks.module-CtKKkkha.js",
+    "name": "hooks.module"
+  },
+  "fresh:client-entry": {
+    "file": "assets/client-entry-DSv4n8py.js",
+    "name": "client-entry",
+    "src": "fresh:client-entry",
+    "isEntry": true,
+    "imports": [
+      "_hooks.module-CtKKkkha.js"
+    ],
+    "css": [
+      "assets/client-entry-BhchZsG4.css"
+    ]
+  },
+  "islands/Canvas.tsx": {
+    "file": "assets/fresh-island__Canvas-Cz6lxTPn.js",
+    "name": "fresh-island__Canvas",
+    "src": "islands/Canvas.tsx",
+    "isEntry": true,
+    "imports": [
+      "_hooks.module-CtKKkkha.js"
+    ],
+    "dynamicImports": [
+      "static/gameboy.js"
+    ]
+  },
+  "static/gameboy.js": {
+    "file": "assets/gameboy-42JYBtp9.js",
+    "name": "gameboy",
+    "src": "static/gameboy.js",
+    "isDynamicEntry": true
+  },
+  "static/web-ui.png": {
+    "file": "assets/web-ui-BXgOqnZ5.png",
+    "src": "static/web-ui.png"
+  }
+}
