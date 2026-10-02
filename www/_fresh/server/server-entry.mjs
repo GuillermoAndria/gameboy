@@ -2825,7 +2825,7 @@ if (typeof exports$1 === "object" && exports$1 !== null && "default" in exports$
   exports$1.default;
 }
 exports$1.__esModule;
-let BUILD_ID = "34f7e4d3a1118b74b4ccdd36ad12fcae16c44cd7";
+let BUILD_ID = "fd48e6ddb5520bafe518b15f5cb3cd93d94369bb";
 const DENO_DEPLOYMENT_ID$1 = void 0;
 function setBuildId(id) {
   BUILD_ID = id;
@@ -9107,14 +9107,14 @@ const fsRoute_0 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePro
   handler,
   handlers
 }, Symbol.toStringTag, { value: "Module" }));
-const clientEntry = "./assets/client-entry-DSv4n8py.js";
-const version$1 = "34f7e4d3a1118b74b4ccdd36ad12fcae16c44cd7";
+const clientEntry = "./assets/client-entry-C_csSsFk.js";
+const version$1 = "fd48e6ddb5520bafe518b15f5cb3cd93d94369bb";
 const islands = /* @__PURE__ */ new Map();
 const islandPreparer = new IslandPreparer();
 islandPreparer.prepare(islands, Canvas$1, "/assets/fresh-island__Canvas-Cz6lxTPn.js", "Canvas", []);
 const staticFiles$1 = /* @__PURE__ */ new Map([
   ["/assets/hooks.module-CtKKkkha.js", { "name": "/assets/hooks.module-CtKKkkha.js", "hash": "91d95b9c3f73e5a19593dc2af14987b0de34732296cae0a73d78914bfef74def", "filePath": "client/assets/hooks.module-CtKKkkha.js", "contentType": "text/javascript; charset=UTF-8", "immutable": true }],
-  ["/assets/client-entry-DSv4n8py.js", { "name": "/assets/client-entry-DSv4n8py.js", "hash": "5e5ac38becc2fc8cd139081871562279924b069fa3e4f591ba1f56253be33e53", "filePath": "client/assets/client-entry-DSv4n8py.js", "contentType": "text/javascript; charset=UTF-8", "immutable": true }],
+  ["/assets/client-entry-C_csSsFk.js", { "name": "/assets/client-entry-C_csSsFk.js", "hash": "670be932838b1faade5b8992367117a4533a5b48cee683b67a878d7a4a803586", "filePath": "client/assets/client-entry-C_csSsFk.js", "contentType": "text/javascript; charset=UTF-8", "immutable": true }],
   ["/assets/client-entry-BhchZsG4.css", { "name": "/assets/client-entry-BhchZsG4.css", "hash": "787c54daa42d552345b5c534f28ab7daf2929f0bff3f7eb9a6b72c698d395836", "filePath": "client/assets/client-entry-BhchZsG4.css", "contentType": "text/css; charset=UTF-8", "immutable": true }],
   ["/assets/fresh-island__Canvas-Cz6lxTPn.js", { "name": "/assets/fresh-island__Canvas-Cz6lxTPn.js", "hash": "259499dae6d52d1075490cc29e801be4db871fc1479b7309ba2730b3ec72c5d3", "filePath": "client/assets/fresh-island__Canvas-Cz6lxTPn.js", "contentType": "text/javascript; charset=UTF-8", "immutable": true }],
   ["/assets/gameboy-42JYBtp9.js", { "name": "/assets/gameboy-42JYBtp9.js", "hash": "f11089ff780d0a78f823e55cff9f2e9842f735b25f6d1c1fe054bff0fdc595fe", "filePath": "client/assets/gameboy-42JYBtp9.js", "contentType": "text/javascript; charset=UTF-8", "immutable": true }],
