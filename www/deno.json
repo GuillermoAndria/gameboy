@@ -52,13 +52,15 @@
     ],
     "types": ["vite/client"]
   },
-  "nodeModulesDir": "manual",
-  "deploy": {
-    "install": "deno install",
-    "runtime": {
-      "type": "dynamic",
-      "entrypoint": "./_fresh/server.js",
-      "cwd": "."
-    }
+ "nodeModulesDir": "manual",
+"deploy": {
+  "org": "gameboy2",
+  "app": "gameboy",
+  "install": "deno install",
+  "runtime": {
+    "type": "dynamic",
+    "entrypoint": "./_fresh/server.js",
+    "cwd": "."
   }
+}
 }
