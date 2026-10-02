@@ -57,16 +57,11 @@
   },
   "nodeModulesDir": "manual",
   "deploy": {
-    "org": "monad",
-    "app": "gameboy",
-    "include": [
-      ".",
-      "static/gameboy.js",
-      "static/gameboy.wasm",
-      "static/roms"
-    ],
-    "framework": "fresh",
-    "install": "deno install",
-    "build": "deno task build"
+  "install": "deno install",
+  "runtime": {
+    "type": "dynamic",
+    "entrypoint": "./_fresh/server.js",
+    "cwd": "."
   }
+}
 }
