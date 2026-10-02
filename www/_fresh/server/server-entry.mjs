@@ -2825,7 +2825,7 @@ if (typeof exports$1 === "object" && exports$1 !== null && "default" in exports$
   exports$1.default;
 }
 exports$1.__esModule;
-let BUILD_ID = "dbc2d7daf3b41052ec3b0cf3ccea874c88e02639";
+let BUILD_ID = "2e24e11cec0601de3dc8332e0e190bc17c704671";
 const DENO_DEPLOYMENT_ID$1 = void 0;
 function setBuildId(id) {
   BUILD_ID = id;
@@ -6811,7 +6811,7 @@ function useDismiss(open, close, refs) {
     };
   }, [open, close]);
 }
-const GAME_LIBRARY = ["pokemon-yellow.gb"];
+const GAME_LIBRARY = ["pokemon-red.gb"];
 function isValidGame(game) {
   return GAME_LIBRARY.includes(game);
 }
@@ -6851,10 +6851,12 @@ async function fetchRom(game) {
   return new Uint8Array(await response.arrayBuffer());
 }
 const GAME_TITLES = {
-  "pokemon-yellow.gb": "Pokémon Yellow"
+  "pokemon-red.gb": "Pokémon Red"
 };
 function formatGameName(game) {
-  if (isValidGame(game)) return GAME_TITLES[game];
+  if (isValidGame(game)) {
+    return GAME_TITLES[game];
+  }
   return game.replace(/\.gb[c]?$/, "").split("-").map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
 }
 const GAME_OPTIONS = GAME_LIBRARY.map((game) => ({
@@ -9082,19 +9084,21 @@ const fsRoute_0 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePro
   handler,
   handlers
 }, Symbol.toStringTag, { value: "Module" }));
-const clientEntry = "./assets/client-entry-D-dt5D4V.js";
-const version$1 = "dbc2d7daf3b41052ec3b0cf3ccea874c88e02639";
+const clientEntry = "./assets/client-entry-BhR9Cg1h.js";
+const version$1 = "2e24e11cec0601de3dc8332e0e190bc17c704671";
 const islands = /* @__PURE__ */ new Map();
 const islandPreparer = new IslandPreparer();
-islandPreparer.prepare(islands, Canvas$1, "/assets/fresh-island__Canvas-BUKaPO9d.js", "Canvas", []);
+islandPreparer.prepare(islands, Canvas$1, "/assets/fresh-island__Canvas-Ciq0a0Vq.js", "Canvas", []);
 const staticFiles$1 = /* @__PURE__ */ new Map([
   ["/assets/hooks.module-CtKKkkha.js", { "name": "/assets/hooks.module-CtKKkkha.js", "hash": "91d95b9c3f73e5a19593dc2af14987b0de34732296cae0a73d78914bfef74def", "filePath": "client/assets/hooks.module-CtKKkkha.js", "contentType": "text/javascript; charset=UTF-8", "immutable": true }],
-  ["/assets/client-entry-D-dt5D4V.js", { "name": "/assets/client-entry-D-dt5D4V.js", "hash": "e1092222307979ac3f14c9038288a1fd2c88b2affa842f8bb25eae1091673fb4", "filePath": "client/assets/client-entry-D-dt5D4V.js", "contentType": "text/javascript; charset=UTF-8", "immutable": true }],
+  ["/assets/client-entry-BhR9Cg1h.js", { "name": "/assets/client-entry-BhR9Cg1h.js", "hash": "0ff7e52470700913f0b40005bfa2081408858cecf59d0c7b0061389cc1c67de1", "filePath": "client/assets/client-entry-BhR9Cg1h.js", "contentType": "text/javascript; charset=UTF-8", "immutable": true }],
   ["/assets/client-entry-BhchZsG4.css", { "name": "/assets/client-entry-BhchZsG4.css", "hash": "787c54daa42d552345b5c534f28ab7daf2929f0bff3f7eb9a6b72c698d395836", "filePath": "client/assets/client-entry-BhchZsG4.css", "contentType": "text/css; charset=UTF-8", "immutable": true }],
-  ["/assets/fresh-island__Canvas-BUKaPO9d.js", { "name": "/assets/fresh-island__Canvas-BUKaPO9d.js", "hash": "4204237d9b21ddccd1efc7616c9c1930403947044e35d0a9025026088895dc82", "filePath": "client/assets/fresh-island__Canvas-BUKaPO9d.js", "contentType": "text/javascript; charset=UTF-8", "immutable": true }],
+  ["/assets/fresh-island__Canvas-Ciq0a0Vq.js", { "name": "/assets/fresh-island__Canvas-Ciq0a0Vq.js", "hash": "88d727813c829c5fc1fdcab717026ffc44fe3f6a1e6f6d5486c07ead5b6c71d9", "filePath": "client/assets/fresh-island__Canvas-Ciq0a0Vq.js", "contentType": "text/javascript; charset=UTF-8", "immutable": true }],
   ["/assets/gameboy-42JYBtp9.js", { "name": "/assets/gameboy-42JYBtp9.js", "hash": "f11089ff780d0a78f823e55cff9f2e9842f735b25f6d1c1fe054bff0fdc595fe", "filePath": "client/assets/gameboy-42JYBtp9.js", "contentType": "text/javascript; charset=UTF-8", "immutable": true }],
   ["/assets/web-ui-BXgOqnZ5.png", { "name": "/assets/web-ui-BXgOqnZ5.png", "hash": "171a9c9a61b1caef519cae3f2cef4e8add380bfc2b718839a08ebf233588d489", "filePath": "client/assets/web-ui-BXgOqnZ5.png", "contentType": "image/png", "immutable": true }],
   ["/web-ui.png", { "name": "/web-ui.png", "hash": "171a9c9a61b1caef519cae3f2cef4e8add380bfc2b718839a08ebf233588d489", "filePath": "client/web-ui.png", "contentType": "image/png" }],
+  ["/roms/pokemon-red.gb", { "name": "/roms/pokemon-red.gb", "hash": "5ca7ba01642a3b27b0cc0b5349b52792795b62d3ed977e98a09390659af96b7b", "filePath": "client/roms/pokemon-red.gb", "contentType": "text/plain" }],
+  ["/roms/.gitkeep", { "name": "/roms/.gitkeep", "hash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b", "filePath": "client/roms/.gitkeep", "contentType": "text/plain" }],
   ["/logo.svg", { "name": "/logo.svg", "hash": "bf1196aeac0c511ec4b81b846993de208012c4158fba73d17b575236164d63ce", "filePath": "client/logo.svg", "contentType": "image/svg+xml" }],
   ["/styles.css", { "name": "/styles.css", "hash": "8be673e0252fd91f7497da61a6abca73a91d9de8f1d65e2120b55d5e264c1281", "filePath": "client/styles.css", "contentType": "text/css; charset=UTF-8" }],
   ["/manifest.webmanifest", { "name": "/manifest.webmanifest", "hash": "a0946c3d90c7cc2a05c12d50c9678700293b11872b0713fc5dec2438862a1e24", "filePath": "client/manifest.webmanifest", "contentType": "application/manifest+json; charset=UTF-8" }],

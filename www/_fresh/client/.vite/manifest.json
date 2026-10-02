@@ -4,7 +4,7 @@
     "name": "hooks.module"
   },
   "fresh:client-entry": {
-    "file": "assets/client-entry-D-dt5D4V.js",
+    "file": "assets/client-entry-BhR9Cg1h.js",
     "name": "client-entry",
     "src": "fresh:client-entry",
     "isEntry": true,
@@ -16,7 +16,7 @@
     ]
   },
   "islands/Canvas.tsx": {
-    "file": "assets/fresh-island__Canvas-BUKaPO9d.js",
+    "file": "assets/fresh-island__Canvas-Ciq0a0Vq.js",
     "name": "fresh-island__Canvas",
     "src": "islands/Canvas.tsx",
     "isEntry": true,
