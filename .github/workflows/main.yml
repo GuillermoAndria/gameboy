@@ -21,14 +21,35 @@ jobs:
         run: mkdir -p ROMs
 
       - name: Compilar GameBoy
+        shell: bash
         run: |
+          set -o pipefail
+
+          echo "========== CONFIGURANDO PROYECTO =========="
           cmake -B build -DCMAKE_BUILD_TYPE=Release
-          cmake --build build --parallel 1 --verbose
+
+          echo "========== COMPILANDO =========="
+          cmake --build build --parallel 1 --verbose 2>&1 | tee build.log || {
+            echo ""
+            echo "========== POSIBLES ERRORES =========="
+            grep -niE "error:|fatal:|undefined|not found|no such file|FAILED|Error [0-9]+" build.log | tail -n 100 || true
+
+            echo ""
+            echo "========== ULTIMAS 250 LINEAS =========="
+            tail -n 250 build.log
+
+            exit 1
+          }
 
       - name: Verificar archivos WebAssembly
         run: |
+          echo "Buscando gameboy.js..."
           test -f www/static/gameboy.js
+
+          echo "Buscando gameboy.wasm..."
           test -f www/static/gameboy.wasm
+
+          echo "Archivos encontrados:"
           ls -lh www/static/gameboy.js
           ls -lh www/static/gameboy.wasm
 
